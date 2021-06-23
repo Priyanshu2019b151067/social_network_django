@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}
+Invite friends
+{% endblock title %}
+{% block content %}
+
+ {% for obj in qs %}
+        <div class="ui segment">
+            <div class="ui grid">
+                <div class="row">
+                    <div class="three wide column">
+                        <img src="{{obj.avatar.url}}" class="ui small circular image">
+                    
+                    </div>
+                    <div class="thirteen wide column">
+                        <h3 >{{obj.user}}</h3>
+                        <p>{{obj.bio}}</p>
+                        <a href="{{obj.get_absolute_url}}">
+                        <button class="ui primary button w-big">See Profile</button>
+                        </a>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content %}

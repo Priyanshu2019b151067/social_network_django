@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Home
+{% endblock title %}
+{% block content %}
+<div class="ui grid">
+    <div class="row">
+     <div class="twelve wide column">
+            
+            <img src="{% static 'home.svg' %}" style="width:60%;">
+        </div>
+        <div class="four wide column">
+            <p style="font-size: 60px;  color:grey;">WITH US POST IT WHAT YOU FEEL.</p>
+        </div>
+       
+    
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+<script>
+$(document).ready(function(){
+    console.log("yh bhi chalra")
+    
+})
+
+</script>
+{% endblock scripts %}
